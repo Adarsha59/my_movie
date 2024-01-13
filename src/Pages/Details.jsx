@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchDataFromApi } from '../../components/Api';
 import MoviesDetail from './MoviesDetail';
 import Recommendation from './Reco';
+import Movieplay from './Movieplay';
 
 const Details = () => {
   const { media_type, id } = useParams();
@@ -32,8 +33,12 @@ const Details = () => {
     <div className="here">
 
     <MoviesDetail details={detailsData} />
-    
+    <hr />
+    <div className='hey' > 
+
+    <Movieplay  details={detailsData} />
     <Recommendation   mediaType={media_type} mediaId ={id}   />
+    </div>
     </div>
     </>
   );

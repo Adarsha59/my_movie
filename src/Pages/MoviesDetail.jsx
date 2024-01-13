@@ -110,6 +110,9 @@ const MoviesDetail = ({ details }) => {
         </div>
       </section>
       </section>
+
+
+      
     </>
   );
 };
