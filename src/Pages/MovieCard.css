@@ -1,0 +1,35 @@
+/* MovieCard.css */
+
+.movie-container-new {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+    align-items: center; /* Adjust as needed */
+  }
+  
+  .container-new {
+    width: 100%; /* Adjust as needed */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  
+  .movies-list-new {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjust as needed */
+  }
+  
+  .movie-item-new {
+    width: 30%; /* Adjust as needed */
+    margin: 10px; /* Adjust as needed */
+  }
+  
+  .movie-card-new {
+    /* Styles for each movie card */
+    text-align: center; /* Adjust as needed */
+    cursor: pointer;
+  }
+  
+  /* Add more styles for other elements as needed */
+  
