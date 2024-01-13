@@ -58,7 +58,8 @@ const Trending = () => {
             <li>
               <button
                 className={`filter-btn ${
-                  currentMediaType === "movie" ? "active" : ""
+                  currentMediaType === "movie" ? "active " : ""
+                  
                 }`}
                 onClick={() => handleFilterButtonClick("movie")}
               >
@@ -69,7 +70,7 @@ const Trending = () => {
             <li>
               <button
                 className={`filter-btn ${
-                  currentMediaType === "tv" ? "active" : ""
+                  currentMediaType === "tv" ? "active ": ""
                 }`}
                 onClick={() => handleFilterButtonClick("tv")}
               >

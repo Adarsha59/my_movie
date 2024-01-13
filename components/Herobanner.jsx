@@ -28,16 +28,14 @@ const Herobanner = () => {
         // Set background to the poster of the first upcoming movie
         if (data?.results?.length > 0) {
           const bg = `https://image.tmdb.org/t/p/original/${
-            data.results[
-              Math.floor(Math.random() * data.results.length)
-            ]?.backdrop_path
+            data.results[Math.floor(Math.random() * data.results.length)]
+              ?.backdrop_path
           }`;
 
           setBackground(
             bg
             // `https://image.tmdb.org/t/p/original/${data.results[0].backdrop_path}`
           );
-         
         }
       } catch (error) {
         // Handle error, e.g., show a user-friendly message
@@ -49,9 +47,12 @@ const Herobanner = () => {
   }, []);
   const searchQueryHandler = (event) => {
     if (event.key === "Enter" && query.length > 0) {
-        Navigate(`/search/${query}`);
+      Navigate(`/search/${query}`);
     }
-};
+  };
+  const go = () => {
+    Navigate(`/search/${query}`);
+  };
   return (
     <section
       className="hero"
@@ -76,7 +77,7 @@ const Herobanner = () => {
             onChange={(e) => setQuery(e.target.value)}
             onKeyUp={searchHandle}
           />
-          <div className="hey">
+          <div className="hey" onClick={go}>
             <ion-icon name="search-outline"></ion-icon>
           </div>
         </div>

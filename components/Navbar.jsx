@@ -1,5 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import logo from "./src/logooo.svg";
+
 // import "../src/App.css"
 const Navbar = () => {
   const navigate = useNavigate();
@@ -17,7 +20,7 @@ const Navbar = () => {
     
 
         <a href="/" className="logo">
-          <img src="./src/logooo.svg" alt="Filmlane logo" /><h1  className="ho">Movie-Hunt</h1>
+          <img src={logo} alt="movie hunt" /><h3 className="ho">Movie-Hunt</h3>
         </a>
 
       

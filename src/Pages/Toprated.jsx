@@ -58,7 +58,7 @@ const Toprated = () => {
             <li>
               <button
                 className={`filter-btn ${
-                  currentMediaType === "movie" ? "active" : ""
+                  currentMediaType === "movie" ? "active yellow" : ""
                 }`}
                 onClick={() => handleFilterButtonClick("movie")}
               >
@@ -69,7 +69,7 @@ const Toprated = () => {
             <li>
               <button
                 className={`filter-btn ${
-                  currentMediaType === "tv" ? "active" : ""
+                  currentMediaType === "tv" ? "active yellow" : ""
                 }`}
                 onClick={() => handleFilterButtonClick("tv")}
               >

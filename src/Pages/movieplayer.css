@@ -1,4 +1,43 @@
 /* Add this CSS to your stylesheets */
+.video-player-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive sizing */
+  overflow: hidden;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: #3498db; /* Change the color as needed */
+  border-radius: 50%;
+  cursor: pointer;
+  /* Add a play icon using a pseudo-element or an image */
+}
+
+.play-button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  border-style: solid;
+  border-width: 15px 0 15px 26.0px; /* Adjust the size of the play icon */
+  border-color: transparent transparent transparent white; /* Adjust the color of the play icon */
+}
+
 
 .movie-play-container {
   margin: auto;

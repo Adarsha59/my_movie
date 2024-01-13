@@ -33,7 +33,8 @@ const Best = () => {
           <ul>
             <li>
             <button
-                className="filter-btn"
+                className="filter-btn "
+                
                 onClick={handleExploreAllClick}
               >
                 Explore All

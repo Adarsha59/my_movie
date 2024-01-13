@@ -1,16 +1,26 @@
 import dayjs from "dayjs";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Tplay from "./Tplay";
 import Mplay from "./Mplay";
-import "./movieplayer.css";
+// import "./movieplayer.css";
 const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
   const background = `https://image.tmdb.org/t/p/original/${details.poster_path}`;
+  const [query, setQuery] = useState("");
+  const [currentTime, setCurrentTime] = useState(0);
+
+ 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top on component mount
+  }, []); 
+ 
+
 
   const [seasonNumber, setSeasonNumber] = useState(1);
   const [episodeNumber, setEpisodeNumber] = useState(1);
 
   const handleSeasonChange = (e) => {
+    setSeasonNumber(e.target.value)
     const seasonValue = parseInt(e.target.value, 10);
     if (!isNaN(seasonValue) && seasonValue > 0) {
       setSeasonNumber(seasonValue);
@@ -18,6 +28,7 @@ const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
   };
 
   const handleEpisodeChange = (e) => {
+    setEpisodeNumber(e.target.value)
     const episodeValue = parseInt(e.target.value, 10);
     if (!isNaN(episodeValue) && episodeValue > 0) {
       setEpisodeNumber(episodeValue);
@@ -26,24 +37,9 @@ const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
   //  videoURL = `https://multiembed.mov/directstream.php?video_id=${details.id}&tmdb=${seasonNumber}_${episodeNumber}`;
 
   const Navigate = useNavigate();
-  const trailerContainerRef = useRef(null);
-  const movieContainerRef = useRef(null);
-  {
-    console.log("medaitype", details.id);
-  }
-  const tHere = () => {
-    // Scroll to the trailer container
-    if (trailerContainerRef.current) {
-      trailerContainerRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  
 
-  const mHere = () => {
-    // Scroll to the movie container
-    if (movieContainerRef.current) {
-      movieContainerRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  
   let videoURL = "";
   let videoURL1 = "";
   let videoURL2 = "";
@@ -99,9 +95,7 @@ const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
 
       break;
   }
-  {
-    console.log("video ", videoURL2);
-  }
+  
 
   //   const videoURL1 = ` https://embed.smashystream.com/playere.php?tmdb=${id}`;
 
@@ -132,7 +126,7 @@ const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
                 src={`https://image.tmdb.org/t/p/original/${details.backdrop_path}`}
                 alt={`${details.original_name || details.title} movie poster`}
               />
-              <button className="play-btn" onClick={tHere}>
+              <button className="play-btn" >
                 <ion-icon name="play-circle-outline"></ion-icon>
               </button>
             </figure>
@@ -195,7 +189,7 @@ const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
                   <p className="text">{details.tagline}</p>
                 </div>
 
-                <button className="btn btn-primary" onClick={mHere}>
+                <button className="btn btn-primary">
                   <ion-icon name="play"></ion-icon>
 
                   <span>Watch Now</span>
@@ -217,7 +211,7 @@ const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
       </section>
       <div className="space"></div>
 
-      <div ref={movieContainerRef} className="movie-play-container">
+      <div  className="movie-play-container">
         <h2 className="movie-title">
           Player 1 : {details.title || details.name}
         </h2>
@@ -236,7 +230,7 @@ const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
       </div>
       <div className="space"></div>
 
-      <div ref={movieContainerRef} className="movie-play-container">
+      <div className="movie-play-container">
         <h2 className="movie-title">
           Player 2 : {details.title || details.name}
         </h2>
@@ -276,8 +270,9 @@ const MoviesDetail = ({ details, mediaType, onPlayClick }) => {
       </div>
 
       <div className="space"></div>
-      <div ref={movieContainerRef} className="movie-play-container">
-        <h2 className="movie-title">
+      
+      <div  className="movie-play-container">
+        <h2  className="movie-title">
           Player 3 : {details.title || details.name}
         </h2>
         <div className="video-player">
