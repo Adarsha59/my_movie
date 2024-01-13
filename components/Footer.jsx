@@ -1,6 +1,10 @@
 import React from "react";
 
 const Footer = () => {
+  const facebookLink =
+    "https://www.facebook.com/profile.php?id=100085518428605";
+  const webLink = "https://aadarshapaudyal.com.np/?i=1";
+  const webLink1 = "https://adarsha59.github.io/";
   return (
     <>
       <footer className="footer">
@@ -43,25 +47,25 @@ const Footer = () => {
 
               <ul className="social-list">
                 <li>
-                  <a href="#" className="social-link">
+                  <a href={facebookLink}target="_blank" className="social-link">
                     <ion-icon name="logo-facebook"></ion-icon>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="social-link">
+                  <a href={webLink}target="_blank" className="social-link">
                     <ion-icon name="logo-twitter"></ion-icon>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="social-link">
+                  <a href={webLink1}target="_blank" className="social-link">
                     <ion-icon name="logo-pinterest"></ion-icon>
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="social-link">
+                  <a href={webLink} target="_blank" className="social-link">
                     <ion-icon name="logo-linkedin"></ion-icon>
                   </a>
                 </li>

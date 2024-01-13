@@ -19,15 +19,13 @@ function App() {
     <>
     <Router>
     <Navbar/>
-    
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="*" element={<Error />} />
         <Route path="/:media_type/:id" element={<Details/>} />
         <Route path="/explore/:mediatype" element={<Explore />} />
-        
+      
         <Route path="/search/:query" element={<SearchResult/>} />
-         {/* <Route path="*" element={<PageNotFound />} /> */}
       </Routes>
       <Footer/>
     </Router>

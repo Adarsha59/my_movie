@@ -14,7 +14,9 @@ const Explore = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await fetchDataFromApi(`/discover/${mediatype}?page=${pageNumber}`);
+        const result = await fetchDataFromApi(
+          `/discover/${mediatype}?page=${pageNumber}`
+        );
         setData((prevData) => [...prevData, ...result.results]);
         setHasMore(result.results.length > 0);
         setPageNumber(pageNumber + 1);
@@ -39,7 +41,12 @@ const Explore = () => {
             <ul className="movies-list">
               {data.map((file) => (
                 <li key={file.id}>
-                  <div className="movie-card" onClick={() => handleCardClick(file.id, file.media_type || mediatype)}>
+                  <div
+                    className="movie-card"
+                    onClick={() =>
+                      handleCardClick(file.id, file.media_type || mediatype)
+                    }
+                  >
                     <a>
                       <figure className="card-banner">
                         <img

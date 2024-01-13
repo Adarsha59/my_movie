@@ -1,31 +1,18 @@
 // Mplay.jsx
 import React from 'react';
-import { useParams} from 'react-router-dom';
 import "./movieplayer.css"
+import { useParams } from 'react-router-dom';
 
 const Mplay = ({ details }) => {
-  const { id } = useParams();
-
+    const { media_type,id } = useParams();
  
 
   return (
     <>
-      <div className="movie-play-container">
-        <h2 className="movie-title">{details.title || details.name}</h2>
-        <div className="video-player">
-          {/* Replace the video source with the appropriate one for Mplay */}
-          <iframe
-            title={details.title || details.name}
-            src="https://www.youtube.com/embed/your-mplay-video-id"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </div>
-      <button onClick={goAgain}>Complete Watching</button>
+      
+      <button>Complete Watching</button>
     </>
+   
   );
 };
 
