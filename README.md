@@ -20,7 +20,7 @@ Yomovie is a React-based movie website that allows users to search for movies by
 
 # 🍿 Technology
 
-BlueBird-Movies is built using the following technologies:
+Yomovie is built using the following technologies:
 
 - ReactJS
 - TMDB API
