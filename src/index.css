@@ -992,6 +992,11 @@ body.active { overflow: hidden; }
 }
 .movie-detail  {
   display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /* top: 0; */
   /* position: absolute; */
   /* height: 100%; */
@@ -1623,6 +1628,7 @@ body.active { overflow: hidden; }
   /**
    * MOVIE DETAIL
    */
+  
 
   .movie-detail { padding-bottom: var(--section-padding); }
 

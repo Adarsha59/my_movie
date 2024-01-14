@@ -58,11 +58,13 @@ const Herobanner = () => {
       className="hero"
       style={{
         background: `url("${background}") no-repeat`,
+        height: "66vh",
+        borderRadius :"59px"
       }}
     >
       <div className="container">
         <div className="hero-content">
-          <p className="hero-subtitle">Filmlane</p>
+          <p className="hero-subtitle">MovieHunt</p>
 
           <h1 className="h1 hero-title">
             Unlimited <strong>Movie</strong>, TVs Shows, & More.

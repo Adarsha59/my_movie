@@ -31,7 +31,6 @@ const Explore = () => {
   const handleCardClick = (id, mediaType) => {
     navigate(`/${mediaType}/${id}/`);
   };
-
   return (
     <>
       <div>{console.log("la", data)}</div>
@@ -62,7 +61,7 @@ const Explore = () => {
                           {file.original_title || file.name}
                         </h3>
                       </a>
-
+                    
                       <time dateTime="2022">
                         {file.media_type === "movie"
                           ? dayjs(file.release_date).format("MMM DD YYYY")
