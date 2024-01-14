@@ -9,8 +9,7 @@ const options = {
     accept: "application/json",
     // Uncomment the line below and make sure your token is used correctly
     // Authorization: "Bearer " + TMDB_TOKEN,
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMzlkYWE0NTJkMWQwMjUwODI2N2ZkZTRhNWIxZTY3NiIsInN1YiI6IjY0MmQzYWY5MTU4Yzg1MDBlMGI3ZDFmYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.vEZV2XBa5BPnXojrncZg9qvAP4rewmkHWwKijvGcixU'
-  },
+   },
 };
 
 export const fetchDataFromApi = async (url, params) => {
