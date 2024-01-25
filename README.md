@@ -79,4 +79,4 @@ Adarsha Paudyal
 
 
 # 😍 Contribution
-Contributions are always welcome, open a **Pull Request** and help us improve our project.
+Contributions are always welcome, open a **Pull Request** and help us improve the project.
